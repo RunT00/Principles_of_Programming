@@ -1,27 +1,37 @@
 #include "graphics.h"
 #include "background.h"
 #include "foreground.h"
+#include "window.h"
+
+Pair calc_arena_grid_size(Pair window_size, const int GRID_WIDTH, const int WALL_WIDTH)
+{
+    Pair grid_size;
+    grid_size.x = (window_size.x - 2 * WALL_WIDTH) / GRID_WIDTH;
+    grid_size.y = (window_size.y - 2 * WALL_WIDTH) / GRID_WIDTH;
+    return grid_size;
+}
 
 void main(void)
 {   
-    const struct pair WINDOW_SIZE = {520, 520};
+    srand(time(NULL)); // reset random sequence according to current time
 
-    const int GRID_SIZE = 50;
+    const int GRID_WIDTH = 50;
     const int WALL_WIDTH = 5;
-    struct pair arena_grid_size = calc_arena_grid_size(WINDOW_SIZE, GRID_SIZE, WALL_WIDTH);
-    struct pair arena_pixel_size = calc_arena_pixel_size(arena_grid_size, GRID_SIZE);
 
-    const struct arena ARENA =
+    const Pair WINDOW_SIZE = 
+    {
+        .x = (rand() % (1001 -  5 * GRID_WIDTH - 2 * WALL_WIDTH)) + 5 * GRID_WIDTH + 2 * WALL_WIDTH, // min: 5 grids ~ max: 1000
+        .y = (rand() % (701 - 5 * GRID_WIDTH - 2 * WALL_WIDTH)) + 5 * GRID_WIDTH + 2 * WALL_WIDTH // min: 5 grids ~ max: 700
+    };
+    
+    const Arena ARENA =
     {   
-        .grid_size = GRID_SIZE,
-        .wall_width = WALL_WIDTH,
-        .arena_grid_size = arena_grid_size,
-        .arena_pixel_size = arena_pixel_size,
+        .GRID_WIDTH = GRID_WIDTH,
+        .WALL_WIDTH = WALL_WIDTH,
+        .GRID_SIZE = calc_arena_grid_size(WINDOW_SIZE, GRID_WIDTH, WALL_WIDTH)
     };
 
     setWindowSize(WINDOW_SIZE.x, WINDOW_SIZE.y);
-    reset_rand();
-
-    struct pair pos_marker = draw_background(WINDOW_SIZE, ARENA);
-    draw_foreground(WINDOW_SIZE, ARENA, pos_marker);
+    draw_background(ARENA);
+    init_foreground(ARENA);
 }

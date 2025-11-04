@@ -1,16 +1,20 @@
 #ifndef FOREGROUND_H
 #define FOREGROUND_H
-#include "background.h"
+#include "window.h"
 
 enum direction {LEFT, UP, RIGHT, DOWN};
-struct robot
-{
-    struct pair grid_coord;
-    enum direction direction;
-};
 
-enum direction init_direction(struct robot robot, struct pair arena_grid_size);
-void draw_robot(struct robot robot, struct arena arena);
-void draw_foreground(struct pair window_size, struct arena arena, struct pair pos_marker);
+#define MAX_PATH_LEN 400
+#define MAX_Y 20
+#define MAX_X 20
+
+typedef struct
+{
+    Pair grid_coord;
+    enum direction direction;
+    int num_carry;
+} Robot;
+
+void init_foreground(const Arena ARENA);
 
 #endif
