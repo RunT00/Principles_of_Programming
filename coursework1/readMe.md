@@ -21,17 +21,17 @@ Markers are randomly distributed in the circular area. The robot has to move aro
 
 <br>
 
-To **compile** the program, run the following command in PowerShell / Command Line / WSL:
+To **compile** the program, run the following command in Windows PowerShell / Command Prompt / Windows Subsystem for Linux:
 
 `gcc -o window background.c foreground.c robot.c graphics.c window.c`
 
 <br>
 
-To **execute** the program, run the following command in PowerShell / WSL:
+To **execute** the program, run the following command in Windows PowerShell / Windows Subsystem for Linux:
 
 `./window | java.exe -jar drawapp-4.5.jar`
 
-For Command Line, run the following command:
+For Command Prompt, run the following command to execute the program:
 
 `window.exe | java.exe -jar drawapp-4.5.jar`
 
