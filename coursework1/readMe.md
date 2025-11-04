@@ -5,9 +5,9 @@
 
 **Description:**
 
-This program generates a randomly-sized array with obstacles, markers and a robot in it.
+This program generates a randomly sized array with obstacles, markers and a robot in it.
 
-There are obstacles around, forming a randomly-sized circular area in the middle. The robot is able to move inside this area, but cannot move onto any grid of obstacle.
+There are obstacles around, forming a randomly sized circular area in the middle. The robot is able to move inside this area, but cannot move onto any grid of obstacle.
 
 Markers are randomly distributed in the circular area. The robot has to move around to pick up markers and stop immediately when all markers are collected.
 
