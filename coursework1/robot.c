@@ -22,7 +22,7 @@ void right(Robot *ptr_robot)
     ptr_robot->direction = (ptr_robot->direction + 5) % 4;
 }
 
-int atMarker(Robot *ptr_robot, const Arena ARENA, char arr_arena[][ARENA.GRID_SIZE.x]) // returns boolean
+int atMarker(Robot *ptr_robot, const Arena ARENA, char arr_arena[][ARENA.GRID_SIZE.x])
 {   
     for (size_t i = 0; i < ARENA.GRID_SIZE.y; i++)
     {
@@ -30,11 +30,11 @@ int atMarker(Robot *ptr_robot, const Arena ARENA, char arr_arena[][ARENA.GRID_SI
         {
             if (arr_arena[i][j] == 'M' && i == ptr_robot->grid_coord.y && j == ptr_robot->grid_coord.x)
             {
-                return 1; // true
+                return 1;
             }
         }
     }
-    return 0; // false
+    return 0;
 }
 
 int canMoveForward(Robot *ptr_robot, const Arena ARENA, char arr_arena[][ARENA.GRID_SIZE.x])

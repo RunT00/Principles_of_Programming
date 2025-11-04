@@ -13,15 +13,15 @@ Pair calc_arena_grid_size(Pair window_size, const int GRID_WIDTH, const int WALL
 
 void main(void)
 {   
-    srand(time(NULL)); // reset random sequence according to current time
+    srand(time(NULL));
 
     const int GRID_WIDTH = 50;
     const int WALL_WIDTH = 5;
 
     const Pair WINDOW_SIZE = 
     {
-        .x = (rand() % (1001 -  5 * GRID_WIDTH - 2 * WALL_WIDTH)) + 5 * GRID_WIDTH + 2 * WALL_WIDTH, // min: 5 grids ~ max: 1000
-        .y = (rand() % (701 - 5 * GRID_WIDTH - 2 * WALL_WIDTH)) + 5 * GRID_WIDTH + 2 * WALL_WIDTH // min: 5 grids ~ max: 700
+        .x = (rand() % (1001 -  5 * GRID_WIDTH - 2 * WALL_WIDTH)) + 5 * GRID_WIDTH + 2 * WALL_WIDTH,
+        .y = (rand() % (701 - 5 * GRID_WIDTH - 2 * WALL_WIDTH)) + 5 * GRID_WIDTH + 2 * WALL_WIDTH
     };
     
     const Arena ARENA =
