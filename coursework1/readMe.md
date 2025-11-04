@@ -5,7 +5,7 @@
 
 **Description:**
 
-This program generates a randomly sized array with obstacles, markers and a robot in it.
+This program generates outputs to draw a randomly sized arena with obstacles, markers and a robot in it.
 
 There are obstacles around, forming a randomly sized circular area in the middle. The robot is able to move inside this area, but cannot move onto any grid of obstacle.
 
@@ -13,7 +13,7 @@ Markers are randomly distributed in the circular area. The robot has to move aro
 
 <br><br>
 
-**Compile and Run Program:**
+**Compile and Run Drawing Program:**
 
 **Unzip** `COMP0002CW1.zip` and run a terminal program inside the directory.
 
