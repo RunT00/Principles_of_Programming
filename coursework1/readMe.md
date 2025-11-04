@@ -11,7 +11,7 @@ There are obstacles around, forming a circular area in the middle. The robot is 
 
 Markers are randomly distributed in the circular area. The robot has to move around to pick up markers and stop immediately when all markers are collected.
 
-<br>
+<br><br>
 
 **Compile and Run Program:**
 
@@ -19,9 +19,13 @@ Markers are randomly distributed in the circular area. The robot has to move aro
 
 **Copy** `drawapp-4.5.jar`, `graphics.c`, and `graphics.h` to the directory.
 
+<br>
+
 To **compile** the program, run the following command in PowerShell / Command Line / WSL:
 
 `gcc -o window background.c foreground.c robot.c graphics.c window.c`
+
+<br>
 
 To **execute** the program, run the following command in PowerShell / WSL:
 
