@@ -278,7 +278,7 @@ void draw_foreground(Robot *ptr_robot, const Arena ARENA, char arr_arena[][ARENA
     clear();
     draw_objects(ARENA, arr_arena);
     draw_robot(ptr_robot, ARENA, grid_dots, temp_grids);
-    sleep(200);
+    sleep(50);
 }
 
 void run_foreground(Robot *ptr_robot, const Arena ARENA, char arr_arena[][ARENA.GRID_SIZE.x], int grid_dots[][8], int temp_grids[][3], int num_markers)
