@@ -66,16 +66,7 @@ int check_marker_exists(const Arena ARENA, char arr_arena[][ARENA.GRID_SIZE.x], 
 
 void init_grids(const int GRID_WIDTH, int grid_dots[][8])
 {   
-    /* for drawing triangular robot, intialize 8 points in a grid like
-    * - * - *
-    - - - - -
-    * - - - *
-    - - - - -
-    S - * - *
-    and choose 3 points for each direction of robot,
-    starting from S clockwisely,
-    there will be interval outside these 5x5 points in a grid */
-
+    // initialize 8 points for drawing triangular robot in all four directions
     int interval = (int)(GRID_WIDTH / 10.0);
     int offset = (int)((GRID_WIDTH - 2 * interval) / 2.0);
 
